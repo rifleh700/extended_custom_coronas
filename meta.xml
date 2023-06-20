@@ -1,0 +1,62 @@
+<meta>
+	
+	<info
+		author="rifleh700"
+		version="1.0.0"
+		name="extended_custom_coronas"
+		description="Modified version of 'custom_coronas' resource by Ren712"
+		type="script"
+	/>
+
+	<file src="textures/coronastar.png" type="client" />
+
+	<file src="shaders/corona.fx" type="client" />
+	<file src="shaders/corona_dir.fx" type="client" />
+
+	<script src="check.lua" 						type="shared" />
+	
+	<script src="ecc_helper_shared.lua" 			type="shared" />
+	<script src="ecc_main_client.lua" 				type="client" />
+	<script src="ecc_exported_client.lua" 			type="client" />
+
+	<export function="createCorona" type="client" />
+	<export function="createDirectionalCorona" type="client" />
+	<export function="isCoronaDirectional" type="client" />
+
+	<export function="setCoronaTexture" type="client" />
+	<export function="getCoronaTexture" type="client" />
+	<export function="setCoronaPosition" type="client" />
+	<export function="getCoronaPosition" type="client" />
+	<export function="setCoronaRotation" type="client" />
+	<export function="getCoronaRotation" type="client" />
+	<export function="setCoronaDirection" type="client" />
+	<export function="getCoronaDirection" type="client" />
+	<export function="setDirectionalCoronaCone" type="client" />
+	<export function="getDirectionalCoronaCone" type="client" />
+	<export function="setCoronaInterior" type="client" />
+	<export function="getCoronaInterior" type="client" />
+	<export function="setCoronaDimension" type="client" />
+	<export function="getCoronaDimension" type="client" />
+
+	<export function="attachCorona" type="client" />
+	<export function="setCoronaAttachedOffsets" type="client" />
+	<export function="getCoronaAttachedTo" type="client" />
+	<export function="getCoronaAttachedOffsets" type="client" />
+	<export function="detachCorona" type="client" />
+
+	<export function="setCoronaSize" type="client" />
+	<export function="getCoronaSize" type="client" />
+	<export function="setCoronaColor" type="client" />
+	<export function="getCoronaColor" type="client" />
+	<export function="setCoronaAlpha" type="client" />
+	<export function="getCoronaAlpha" type="client" />
+	
+	<export function="setCoronaDepthBias" type="client" />
+	<export function="getCoronaDepthBias" type="client" />
+	
+	<export function="setCoronasDepthBiasEnabled" type="client" />
+	<export function="getCoronasDepthBiasEnabled" type="client" />
+	<export function="setCoronasFadeDistance" type="client" />
+	<export function="getCoronasFadeDistance" type="client" />
+
+</meta>
