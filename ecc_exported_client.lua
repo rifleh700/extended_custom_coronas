@@ -1,5 +1,5 @@
 
----@param ctype string Type of the corona. Valid values are "simple", "directional", "nomat", "soft".
+---@param ctype string Type of the corona. Valid values are "simple", "directional", "nomat".
 function createCustomCorona(x, y, z, rx, ry, rz, ctype, size, r, g, b, a, texture)
 
 	ctype = ctype or CORONA_TYPE_SIMPLE
@@ -26,6 +26,7 @@ function getCustomCoronaType(corona)
 	return data.ctype
 end
 
+--- Doesn't affect "nomat" coronas
 function setCustomCoronaTexture(corona, texture)
 
 	local data = ECC.coronasData[corona]
@@ -68,6 +69,7 @@ function getCustomCoronaPosition(corona)
 	return data.pos[1], data.pos[2], data.pos[3]
 end
 
+--- Affects only "directional" coronas
 function setCustomCoronaRotation(corona, rotX, rotY, rotZ)
 
 	local data = ECC.coronasData[corona]
@@ -251,9 +253,8 @@ function getCustomCoronaAlpha(corona)
 	return data.color[4]
 end
 
---- Only for "directional" type coronas.
+--- Affects only "directional" coronas.
 --- Pass greater angles (180 is maximum)
----@param corona userdata the corona element
 ---@param outerAngle number outer angle (0 - 180)
 ---@param innerAngle number inner angle (0 - outerAngle)
 function setCustomCoronaLightCone(corona, outerAngle, innerAngle)
@@ -282,7 +283,7 @@ function getCustomCoronaLightCone(corona)
 	return math.deg(data.lightCone[1]*2), math.deg(data.lightCone[2]*2)
 end
 
---- Only for "nomat" type coronas
+--- Affects only "nomat" coronas
 function setCustomCoronaLightAttenuationPower(corona, power)
 
 	local data = ECC.coronasData[corona]
